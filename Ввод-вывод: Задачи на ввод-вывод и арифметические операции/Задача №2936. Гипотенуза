@@ -1,0 +1,17 @@
+//Дано два числа a и b. Найдите гипотенузу треугольника с заданными катетами.
+//Входные данные
+//В двух строках вводятся два числа (числа целые,положительные, не превышают 1000).
+//Выходные данные
+//Выведите ответ на задачу.
+import java.util.Scanner;
+public class hipotinuza {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        int a,b;
+        a = input.nextInt();
+        b = input.nextInt();
+        double c;
+        c = Math.sqrt((a * a) + (b * b));
+        System.out.println(c);
+    }
+}
