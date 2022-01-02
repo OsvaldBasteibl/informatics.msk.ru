@@ -1,0 +1,20 @@
+//Даны два натуральных числа n и m. Если одно из них делится на другое
+//нацело, выведите 1, иначе выведите любое другое целое число.
+//При решении этой задачи нельзя пользоваться условной инструкцией if и
+//циклами.
+//Входные данные
+//Вводятся два натуральных числа n и m.
+//Выходные данные
+//Выведите ответ на задачу.
+//Решение
+import java.util.Scanner;
+public class Delimost {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n,m,result;
+        n = input.nextInt();
+        m = input.nextInt();
+        result = ((n % m) * (m % n)) +1;
+        System.out.println(result);
+    }
+}
