@@ -1,0 +1,32 @@
+//Даны три целых числа A, B, C. Определить, есть ли среди них хотя бы
+//одно четное и хотя бы одно нечетное.
+//Входные данные
+//Числа A, B, C, не превышающие по модулю 10000.
+//Выходные данные
+//Одна строка – "YES" или "NO".
+//Решение
+import java.util.Scanner;
+public class ChetAndNechet {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[] number_array;
+        int count_chet = 0, count_nechet = 0;
+        number_array = new int[3];
+        for (int i = 0; i < 3; i++){
+            number_array[i] = input.nextInt();
+        }
+        for (int i = 0; i < 3; i++){
+            if (number_array[i]%2==0){
+                count_chet++;
+            }
+            if(number_array[i] % 2 != 0){
+                count_nechet++;
+            }
+        }
+        if(count_chet != 0 && count_nechet != 0){
+            System.out.println("YES");
+        }else {
+            System.out.println("NO");
+        }
+    }
+}
