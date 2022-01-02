@@ -1,0 +1,20 @@
+//Входные данные
+//Даны два целых числа, каждое число записано в отдельной строке.
+//Выходные данные
+//Выведите наибольшее из данных чисел.
+//Решение
+import java.util.Scanner;
+public class MaximumIzDvuh {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a, b;
+        a = input.nextInt();
+        b = input.nextInt();
+        if(a > b){
+            System.out.println(a);
+        }
+        else {
+            System.out.println(b);
+        }
+    }
+}
