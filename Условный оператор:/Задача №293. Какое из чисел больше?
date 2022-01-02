@@ -1,0 +1,24 @@
+//Входные данные
+//Даны два целых числа, каждое записано в отдельной строке.
+//Выходные данные
+//Программа должна вывести число 1, если первое число больше второго,
+//число 2, если второе больше первого, или число 0, если они равны.
+//Решение
+import java.util.Scanner;
+public class KakoeBolshe {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a, b;
+        a = input.nextInt();
+        b = input.nextInt();
+        if(a > b){
+            System.out.println(1);
+        }
+        if(b > a){
+            System.out.println(2);
+        }
+        if(a == b){
+            System.out.println(0);
+        }
+    }
+}
