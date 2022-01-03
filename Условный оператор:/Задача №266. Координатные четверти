@@ -1,0 +1,27 @@
+//Даны координаты двух точек на плоскости, требуется определить, лежат
+//ли они в одной координатной четверти или нет (все координаты отличны
+//от нуля).
+//Входные данные
+//Вводятся 4 числа: координаты первой точки (x1, y1) и координаты второй
+//точки (x2, y2).
+//Выходные данные
+//Программа должна вывести слово YES, если точки находятся в одной
+//координатной четверти, в противном случае вывести слово NO.
+//Решение
+import java.util.Scanner;
+public class CoordinateQuarters {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x1, y1, x2, y2;
+        x1 = input.nextInt();
+        y1 = input.nextInt();
+        x2 = input.nextInt();
+        y2 = input.nextInt();
+        if((x1 > 0 && x2 > 0 && y1 >0 && y2 > 0) || (x1 > 0 && x2 > 0 && y1 < 0 && y2 < 0) || (x1 < 0 && x2 < 0 && y1 > 0 && y2 > 0) || (x1 < 0 && x2 < 0 && y1 < 0 && y2 < 0)){
+            System.out.println("YES");
+        }else {
+            System.out.println("NO");
+        }
+
+    }
+}
