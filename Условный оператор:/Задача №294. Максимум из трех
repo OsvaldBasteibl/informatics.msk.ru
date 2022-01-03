@@ -1,0 +1,23 @@
+//Входные данные
+//Даны три целых числа, каждое записано в отдельной строке.
+//Выходные данные
+//Выведите наибольшее из данных чисел (программа должна вывести ровно одно целое число).
+//Решение
+import java.util.Scanner;
+public class MaximumOfThree {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a, max, count;
+        max = -2147483648;
+        count = 3;
+        while (count != 0){
+            a = input.nextInt();
+            if(a >= max){
+                max = a;
+            }
+
+            count--;
+        }
+        System.out.println(max);
+    }
+}
