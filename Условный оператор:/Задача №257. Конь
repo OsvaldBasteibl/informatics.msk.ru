@@ -1,0 +1,26 @@
+//Требуется определить, бьет ли конь, стоящий на клетке с указанными
+//координатами (номер строки и номер столбца), фигуру, стоящую на
+//другой указанной клетке.
+//Входные данные
+//Вводятся четыре числа: координаты коня и координаты другой фигуры.
+//Все координаты - целые числа в интервале от 1 до 8.
+//Выходные данные
+//Программа должна вывести слово YES, если конь может побить фигуру за
+//1 ход, в противном случае вывести слово NO.
+//Решение
+import java.util.Scanner;
+public class Horse {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x, y, x1, y1;
+        x = input.nextInt();
+        y = input.nextInt();
+        x1 = input.nextInt();
+        y1 = input.nextInt();
+        if((Math.abs(x - x1) == 2)&&(Math.abs(y - y1) == 1)||(Math.abs(x - x1) == 1)&&(Math.abs(y - y1) == 2)){
+            System.out.println("YES");
+        }else {
+            System.out.println("NO");
+        }
+    }
+}
