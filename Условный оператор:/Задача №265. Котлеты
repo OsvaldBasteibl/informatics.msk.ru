@@ -1,0 +1,31 @@
+//На сковородку одновременно можно положить k котлет. Каждую котлету
+//нужно с каждой стороны обжаривать m минут непрерывно. За какое
+//наименьшее время удастся поджарить с обеих сторон n котлет?
+//Входные данные
+//Вводятся 3 числа: k, m и n. Все числа не превосходят 32000.
+//Выходные данные
+//Вывести время, за которое все котлеты будут обжарены.
+//Решение
+import java.util.Scanner;
+public class Cutlets {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int k, m, n, result;
+        k = input.nextInt();
+        m = input.nextInt();
+        n = input.nextInt();
+        if(n <= k){
+            result = 2 * m;
+            System.out.println(result);
+        }
+        if(n > k){
+            if((2 * n) % k == 0){
+                result = ((2 * n) / k) * m;
+                System.out.println(result);
+            }if((2 * n) % k != 0){
+                result = (((2 * n) / k) + 1) * m;
+                System.out.println(result);
+            }
+        }
+    }
+}
