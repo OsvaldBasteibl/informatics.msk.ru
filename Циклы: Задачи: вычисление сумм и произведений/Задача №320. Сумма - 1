@@ -1,0 +1,25 @@
+//По данному числу n вычислите сумму 1+1/22+1/32+...+1/n2.
+//Входные данные
+//Вводится одно число n, не превосходящее 100000.
+//Выходные данные
+//Необходимо вывести  значение суммы.
+//Решение
+import java.util.*;
+public class Amount_1 {
+    public static int pow(int base, int indicator){
+        int result;
+        result = (int)(Math.pow(base,indicator));
+        return result;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n;
+        double result = 0, temp;
+        n = input.nextInt();
+        for(int i = 1 ; i <= n; i++){
+            temp = pow(i,2);
+            result = result + 1 / temp;
+        }
+        System.out.println(result);
+    }
+}
