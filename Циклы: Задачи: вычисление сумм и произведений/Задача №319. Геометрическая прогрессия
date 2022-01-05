@@ -1,0 +1,29 @@
+//По данному действительному числу a и натуральному n вычислите сумму
+//1+a+a^2+...+a^n, не используя формулу суммы геометрической прогрессии.
+//Время работы программы должно быть пропорционально n.
+//Входные данные
+//Вводятся 2 числа - a и n.
+//Выходные данные
+//Необходимо вывести  значение суммы.
+//Решение
+import java.util.*;
+public class GeometricProgression {
+    public static double pow(double base, int indicator){
+        double result;
+        result = Math.pow(base,indicator);
+        return result;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double n;
+        double a, summary = 1;
+        a = input.nextInt();
+        n = input.nextInt();
+
+        for(int i = 1; i <= n; i++){
+            summary = summary + pow(a,i);
+        }
+        System.out.println(summary);
+
+    }
+}
