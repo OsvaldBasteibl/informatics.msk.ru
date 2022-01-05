@@ -17,7 +17,7 @@ public class GeometricProgression {
         Scanner input = new Scanner(System.in);
         double n;
         double a, summary = 1;
-        a = input.nextInt();
+        a = input.nextDouble();
         n = input.nextInt();
 
         for(int i = 1; i <= n; i++){
