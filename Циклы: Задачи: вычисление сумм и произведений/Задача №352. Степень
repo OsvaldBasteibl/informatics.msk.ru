@@ -1,0 +1,19 @@
+//Напишите программу, вычисляющую 2^N.
+//Входные данные
+//Вводится целое неотрицательное число N, которое не превосходит 30.
+//Выходные данные
+//Выведите число 2 N.
+//Решение
+import java.util.*;
+public class Degree {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int N, result = 1;
+        N = input.nextInt();
+        while(N > 0){
+            result = 2 * result;
+            N--;
+        }
+        System.out.println(result);
+    }
+}
