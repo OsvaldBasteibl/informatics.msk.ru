@@ -1,0 +1,26 @@
+//По данным натуральным n и k вычислите значение Ckn=n!/(k!(n−k)!) (число сочетаний из n элементов по k).
+//Входные данные
+//Вводятся 2 числа - n и k (n,k≤30).
+//Выходные данные
+//Необходимо вывести  значение Ckn.
+//Решение
+import java.util.*;
+public class NumberOfCombinations {
+    public static long fact(long temp){
+        long t, res = 1;
+        for(int i = 1; i <= temp; i++){
+            res = res * i;
+        }
+        return res;
+    };
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        long n, k;
+        int result;
+        n = input.nextInt();
+        k = input.nextInt();
+        result = (int)(fact(n)/(((fact(k)) * (fact(n - k)))));
+        System.out.println(result);
+    }
+
+}
